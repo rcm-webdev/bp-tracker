@@ -54,7 +54,7 @@ function Navbar() {
             >
               <path
                 fill="none"
-                stroke="#f9cbe5"
+                stroke="#C8197C"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
