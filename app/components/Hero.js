@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "@/public/scan-heart.svg";
+import Logo from "@/public/scan-heart-2.svg";
 import LoginButton from "./LoginButton";
 
 function Hero() {
