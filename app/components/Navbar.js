@@ -46,7 +46,7 @@ function Navbar() {
               </li>
             </ul>
           </div>
-          <button className="btn btn-ghost text-xl">
+          <button className="btn btn-ghost text-xl hidden lg:flex lg:items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -88,7 +88,7 @@ function Navbar() {
           </ul>
         </div>
         <div className="navbar-end">
-          <LoginButton size={"sm"} />
+          <LoginButton size={"md"} />
         </div>
       </div>
     </div>
