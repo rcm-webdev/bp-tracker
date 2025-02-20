@@ -1,3 +1,5 @@
+import Example from "./ChartExample";
+
 function Features() {
   return (
     <div className="bg-base-200 ">
@@ -30,7 +32,13 @@ function Features() {
           <div className="col-span-2 row-span-3 col-start-3">
             <div className="card h-full bg-base-100 card-xl shadow-sm">
               <div className="card-body">
-                <h2 className="card-title text-[#109480]">
+                <div className="rounded-2xl p-3">
+                  <h1 className="font-bold text-center text-xl">
+                    📅 Weekly Report
+                  </h1>
+                  <Example />
+                </div>
+                <h2 className="card-title text-[#109480] mt-6">
                   See the bigger picture
                 </h2>
                 <p className="text-lg font-semibold">
