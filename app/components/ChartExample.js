@@ -18,16 +18,33 @@ const data = [
     name: "Monday",
     systolic: 145,
     diastolic: 96,
+    BP: "High",
   },
   {
     name: "Tuesday",
     systolic: 117,
     diastolic: 79,
+    BP: "Normal",
   },
 ];
 
+const getBPStatus = (systolic, diastolic) => {
+  if (systolic >= 120 || diastolic >= 80) {
+    return "Your Blood Pressure is HIGH";
+  } else {
+    return "Normal Blood Pressure";
+  }
+};
+
 const CustomTooltip = ({ active, payload, label }) => {
-  if (active && payload?.length) {
+  if (active && payload?.length >= 2) {
+    const systolicEntry = payload.find((p) => p.dataKey === "systolic");
+    const diastolicEntry = payload.find((p) => p.dataKey === "diastolic");
+    const systolic = systolicEntry?.value;
+    const diastolic = diastolicEntry?.value;
+
+    const status = getBPStatus(systolic, diastolic);
+
     return (
       <div className="bg-neutral text-neutral-content p-5 rounded-2xl shadow-sm">
         <p>
@@ -38,9 +55,12 @@ const CustomTooltip = ({ active, payload, label }) => {
             {entry.name}: {entry.value}
           </p>
         ))}
+        <hr className="my-2 opacity-30" />
+        <p className="font-semibold italic">{status}</p>
       </div>
     );
   }
+
   return null;
 };
 
